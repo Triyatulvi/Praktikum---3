@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    
+    <title>KALKULATOR SEDERHANA</title>
+    <link rel="stylesheet" href="Latihan kalkulator.css">
+    <script language="JavaScript">
+        function hapussemua() {
+            document.kalkulator.reset();
+        }
+        function tambah() {
+            var angka1 = parseFloat(document.kalkulator.angka1.value);
+            var angka2 = parseFloat(document.kalkulator.angka2.value);
+            var hasil = angka1 + angka2;
+            document.kalkulator.hasil.value = hasil;
+        }
+        function kurang() {
+            var angka1 = parseFloat(document.kalkulator.angka1.value);
+            var angka2 = parseFloat(document.kalkulator.angka2.value);
+            var hasil = angka1 - angka2;
+            document.kalkulator.hasil.value = hasil;
+        }
+        function bagi() {
+            var angka1 = parseFloat(document.kalkulator.angka1.value);
+            var angka2 = parseFloat(document.kalkulator.angka2.value);
+            var hasil = angka1 / angka2;
+            document.kalkulator.hasil.value = hasil;
+        }
+        function kali() {
+            var angka1 = parseFloat(document.kalkulator.angka1.value);
+            var angka2 = parseFloat(document.kalkulator.angka2.value);
+            var hasil = angka1 * angka2;
+            document.kalkulator.hasil.value = hasil;
+        }
+        document.write(document.lastModified)
+    </script>
+</head>
+
+<body>
+    <div class ="center">
+    <h1>KALKULATOR SIMPLE</h1>
+    <form action="" name="kalkulator">
+        Bil 1 :
+        <input type="text" name="angka1" value="">  
+        <br> <br>
+        Bil 2 :
+        <input type="text" name="angka2" value="">
+        <br> <br>
+        <input type="button" value="[+] " onclick="tambah()">
+        <input type="button" value="[-] " onclick="kurang()">
+        <input type="button" value="[:] " onclick="bagi()">
+        <input type="button" value="[x] " onclick="kali()">
+        <br> <br> 
+        Reset : <input type="button" value="Ulang" onclick="hapussemua()"  >
+       
+     <br> 
+     <br>
+     Hasil : <input type="text" name="hasil" readonly value="">
+    </form>
+    </div>
+</body>
+</html>

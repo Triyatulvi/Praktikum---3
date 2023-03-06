@@ -1,0 +1,42 @@
+<HTML>
+    <head>
+        <style>
+            body {
+                background-color:lightblue;
+            }
+            </style>
+        <title>Konversi Nilai Angka Menjadi Huruf</title>
+        </head>
+        <Script language = "Javascript" >
+            //cara konversi nilai 
+        function konversi(){
+            var y = document.input.angka.value
+            if(y<=40)
+            document.input.huruf. value = "E"
+            else if (41<=y && 55>=y)
+            document.input.huruf. value = "D"
+            else if (56<=y && 60>=y)
+            document.input.huruf. value = "C"
+            else if (61<=y && 65>=y)
+            document.input.huruf. value = "BC"
+            else if (66<=y && 70>=y)
+            document.input.huruf. value = "B"
+            else if (71<=y && 80>=y)
+            document.input.huruf. value = "AB"
+            else if (81<=y && 100>=y)
+            document.input.huruf. value = "A"
+            else
+            window.alert("Kategori Tidak Ditemukan!")
+        }
+        document.write(document.lastModified)
+</script>
+<body>
+    <h1>Konversi Nilai Menjadi Huruf</h1> 
+    <!-- judul halaman web -->
+    <form name="input"> 
+           <!-- membuat isian form -->
+        <p>Input Angka : <input type="text" name="angka" size="20" value="0">  <input type="button" name="button1" value="convert" onclick=konversi()></p>
+        <p>Nilai Huruf : <input type="text" name="huruf" size="20"  readonly value=" "></p>
+    </form>
+</body>
+</html>
